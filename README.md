@@ -2,7 +2,7 @@
 
 > **"You are not alone after motherhood."**
 
-##PostHamli is a SaaS web application providing AI-powered emotional support for mothers experiencing postpartum depression. Built with React, TypeScript, and Claude API (Anthropic).
+## PostHamli is a SaaS web application providing AI-powered emotional support for mothers experiencing postpartum depression. Built with React, TypeScript, and Claude API (Anthropic).
 ---
 
 ### Features
