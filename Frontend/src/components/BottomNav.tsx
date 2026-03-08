@@ -5,12 +5,12 @@ interface Props { page: PageId; onNavigate: (p: PageId) => void; }
 
 export default function BottomNav({ page, onNavigate }: Props) {
   const { t } = useLang();
-  const tabs: { id: PageId; icon: string; label: () => string }[] = [
-    { id:"home",      icon:"🏠", label:() => t.navHome },
-    { id:"journal",   icon:"📓", label:() => t.navJournal },
-    { id:"wellness",  icon:"🌿", label:() => t.navWellness },
-    { id:"movements", icon:"🤸", label:() => t.navMovement },
-    { id:"tracker",   icon:"📊", label:() => t.navSupport },
+  const tabs: { id: PageId; label: () => string }[] = [
+    { id:"home",  label:() => t.navHome },
+    { id:"journal", label:() => t.navJournal },
+    { id:"wellness",  label:() => t.navWellness },
+    { id:"movements", label:() => t.navMovement },
+    { id:"tracker",   label:() => t.navSupport },
   ];
   return (
     <nav style={{

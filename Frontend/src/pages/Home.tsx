@@ -5,11 +5,11 @@ import { MOODS, WEEK } from "../data/constants";
 import { useLang } from "../hooks/useLang";
 import type { PageId } from "../types";
 
-const QUICK: { icon:string; nav:PageId; bgk:"writeJournal"|"logMood"|"moveGently"|"findSupport"; subk:"writeJournalSub"|"logMoodSub"|"moveGentlySub"|"findSupportSub"; bg:string; a:string }[] = [
-  { icon:"", nav:"journal",   bgk:"writeJournal",  subk:"writeJournalSub",  bg:"#fff0f5", a:"#e91e8c" },
-  { icon:"", nav:"tracker",   bgk:"logMood",       subk:"logMoodSub",       bg:"#f3e5f5", a:"#9c27b0" },
-  { icon:"", nav:"movements", bgk:"moveGently",    subk:"moveGentlySub",    bg:"#e8f5e9", a:"#388e3c" },
-  { icon:"", nav:"wellness",  bgk:"findSupport",   subk:"findSupportSub",   bg:"#e3f2fd", a:"#1976d2" },
+const QUICK: {  nav:PageId; bgk:"writeJournal"|"logMood"|"moveGently"|"findSupport"; subk:"writeJournalSub"|"logMoodSub"|"moveGentlySub"|"findSupportSub"; bg:string; a:string }[] = [
+  { nav:"journal",   bgk:"writeJournal",  subk:"writeJournalSub",  bg:"#fff0f5", a:"#e91e8c" },
+  { nav:"tracker",   bgk:"logMood",       subk:"logMoodSub",       bg:"#f3e5f5", a:"#9c27b0" },
+  { nav:"movements", bgk:"moveGently",    subk:"moveGentlySub",    bg:"#e8f5e9", a:"#388e3c" },
+  { nav:"wellness",  bgk:"findSupport",   subk:"findSupportSub",   bg:"#e3f2fd", a:"#1976d2" },
 ];
 
 export default function Home({ onNav }: { onNav:(p:PageId)=>void }) {
