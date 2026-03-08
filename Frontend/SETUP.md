@@ -1,75 +1,53 @@
-# 🌸 PostHamli — Setup Guide
+# PostHamli — Setup Guide
 
-## ✅ Quick Start (Windows)
+## Requirements
+- Node.js 18+ (https://nodejs.org)
+- An OpenAI API key (https://platform.openai.com/api-keys)
 
-Open PowerShell or Command Prompt in the `posthamli` folder, then run these commands **one by one**:
+## Setup Steps
 
+### 1. Clone / extract the project
 ```bash
-# Step 1 — Install all dependencies (including Vite)
+cd posthamli
+```
+
+### 2. Create your .env file
+Copy the example and add your key:
+```bash
+cp .env.example .env
+```
+Then edit `.env` and replace the placeholder:
+```
+VITE_OPENAI_API_KEY=sk-your-actual-openai-key
+```
+
+### 3. Install dependencies
+```bash
 npm install
+```
 
-# Step 2 — Fix any security vulnerabilities
-npm audit fix
-
-# Step 3 — Start the development server
+### 4. Run the app
+```bash
 npm run dev
 ```
+Open http://localhost:5173 in your browser.
 
-Then open your browser at: **http://localhost:5173**
+## Languages supported
+| Language | Code | Notes |
+|---|---|---|
+| Français | fr | Default |
+| English | en | Full support |
+| العربية | ar | RTL, classical Arabic |
+| الدارجة | darija | RTL, Moroccan dialect |
 
----
+## AI Chatbot
+- Powered by **OpenAI GPT-4o-mini** via `VITE_OPENAI_API_KEY`
+- Each language has its own system prompt tuned for that language/culture
+- Darija system prompt is written in authentic Moroccan dialect
+- Crisis detection: if AI detects distress signals, [ESCALATE] triggers the crisis modal
 
-## 🛠 Requirements
-
-- **Node.js** version 18 or higher → https://nodejs.org
-- **npm** version 8 or higher (comes with Node.js)
-
-Check your versions:
-```bash
-node -v    # should be v18+
-npm -v     # should be 8+
-```
-
----
-
-## ❓ Common Errors
-
-| Error | Fix |
-|-------|-----|
-| `Missing script: "dev"` | Run `npm install` first, then `npm run dev` |
-| `node: command not found` | Install Node.js from https://nodejs.org |
-| Port 5173 already in use | Run `npm run dev -- --port 3000` |
-| TypeScript errors | Run `npm install` again to ensure all `@types` are installed |
-
----
-
-## 🚀 Deploy to Vercel (Free)
-
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Deploy
-vercel
-```
-
-Or connect your GitHub repo at **vercel.com** for automatic deploys.
-
----
-
-## 📁 Project Structure
-
-```
-posthamli/
-├── src/
-│   ├── components/     # Reusable UI (Navbar, Modal, SVGs, Styles)
-│   ├── pages/          # Full pages (Home, Journal, Tracker, Movements, Wellness)
-│   ├── data/           # Constants (moods, affirmations, exercises)
-│   ├── types/          # TypeScript interfaces
-│   ├── App.tsx         # Root component + routing
-│   └── main.tsx        # Entry point
-├── index.html
-├── package.json
-├── vite.config.ts
-└── tsconfig.json
-```
+## Deployment (Vercel)
+1. Push to GitHub
+2. Import in Vercel
+3. Add `VITE_OPENAI_API_KEY` in Vercel environment variables
+4. Deploy!

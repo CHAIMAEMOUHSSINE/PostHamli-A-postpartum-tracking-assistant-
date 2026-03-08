@@ -128,4 +128,3 @@ Made for **Hackathon GenAI for Social Impact 2025**
 Powered by React + Claude API (Anthropic)
 
 > *"You are not just surviving — you are blossoming."*
-"# PostHamli--A-postpartum-tracking-assistant" 

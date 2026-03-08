@@ -1,9 +1,9 @@
-// ─── Types ────────────────────────────────────────────────────────────────────
+export type PageId = "home" | "journal" | "tracker" | "movements" | "wellness";
 
 export interface MoodOption {
-  s: number;
-  e: string;
-  l: string;
+  s: number;   // score 1-9
+  e: string;   // emoji
+  l: string;   // label
 }
 
 export interface DayData {
@@ -33,5 +33,3 @@ export interface JournalEntry {
   text: string;
   tags: string[];
 }
-
-export type PageId = "home" | "journal" | "tracker" | "movements" | "wellness";
