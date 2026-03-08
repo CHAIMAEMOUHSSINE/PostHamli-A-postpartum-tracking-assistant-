@@ -50,4 +50,4 @@ export const DEMO_ENTRIES: JournalEntry[] = [
 
 // OpenAI
 export const OPENAI_API_URL = "https://api.openai.com/v1/chat/completions";
-export const OPENAI_MODEL   = "gpt-4o-mini";
+export const OPENAI_MODEL = "gpt-4.1-mini";

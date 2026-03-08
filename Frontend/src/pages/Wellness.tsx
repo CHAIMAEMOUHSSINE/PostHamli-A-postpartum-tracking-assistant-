@@ -52,7 +52,13 @@ export default function Wellness({ onCrisis }: { onCrisis:()=>void }) {
         }),
       });
       const data = await res.json();
-      const aiText: string = data.choices?.[0]?.message?.content ?? "🌸";
+
+    if (!res.ok) {
+      console.error("OpenAI error:", data);
+      throw new Error(data.error?.message || "OpenAI request failed");
+    }
+
+    const aiText = data.choices[0].message.content;
       if (aiText.includes("[ESCALATE]")) {
         onCrisis();
         setMsgs(p => [...p, { role:"assistant", text:aiText.replace("[ESCALATE]","").trim() }]);
