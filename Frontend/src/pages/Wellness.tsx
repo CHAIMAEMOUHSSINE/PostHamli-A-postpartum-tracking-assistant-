@@ -37,7 +37,7 @@ export default function Wellness({ onCrisis }: { onCrisis:()=>void }) {
         method:"POST",
         headers:{
           "Content-Type":"application/json",
-          "Authorization":`Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+          "Authorization":`Bearer ${import.meta.env.VITE_MISTRAL_API_KEY}`,
         },
         body: JSON.stringify({
           model: OPENAI_MODEL,
