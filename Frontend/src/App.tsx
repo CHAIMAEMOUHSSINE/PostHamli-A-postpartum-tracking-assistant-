@@ -26,9 +26,9 @@ function AppInner() {
     switch (page) {
       case "home":      return <Home onNav={setPage} />;
       case "journal":   return <Journal />;
-      case "tracker":   return <Tracker />;
+      case "tracker":   return <Wellness onCrisis={() => setCrisis(true)}/>;
       case "movements": return <Movements />;
-      case "wellness":  return <Wellness onCrisis={() => setCrisis(true)} />;
+      case "wellness":  return <Tracker/>;
     }
   };
 
